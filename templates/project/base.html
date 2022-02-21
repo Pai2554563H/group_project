@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+
+<html>
+    <head>
+        <title>
+            Project -
+            {% block title_block %}
+                How to Tango with Django!
+            {% endblock %}
+        </title>
+
+        <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+    </head>
+    
+    <body>
+
+        <div id="header">
+            <h1>project</h1>
+        </div>
+
+        <div id="menu">
+            <button class="button button1" type="button" onclick="location.href= '{% url 'project:index' %}'">Index</button>
+            <button class="button button2" type="button" onclick="location.href= '{% url 'project:forum' %}'">Forum</button>
+            <button class="button button3" type="button" onclick="location.href= '{% url 'project:about' %}'">About</button>
+        </div>
+        
+        <hr />
+
+        <div id ="main_body">
+            <h1>main part</h1>
+            {% block body_block %}
+            
+            {% endblock %}
+        </div>
+        
+    </body>
+</html>

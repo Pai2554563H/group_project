@@ -1,0 +1,17 @@
+{% extends 'project/base.html' %}
+{% load staticfiles %}
+
+
+{% block title_block %}
+    Homepage
+{% endblock %}
+
+
+{% block body_block %}
+    <h1>Movies</h1>
+
+    <div>
+        <strong>{{ boldmessage }}</strong><br />
+        <img src="{% static 'images/test.jpg' %}" alt="Picture of test" /><br />
+    </div>
+{% endblock %}
